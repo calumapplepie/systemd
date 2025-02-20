@@ -178,7 +178,7 @@ void dns_cache_force_stale(DnsCache *c) {
         
         /* Force all entries to be stale; they will be cleaned out properly as appropriate*/
         HASHMAP_FOREACH(item, c->by_key) {
-                item->until_valid=1
+                item->until_valid=1;
         }
 }
 
